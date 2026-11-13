@@ -2,20 +2,16 @@
 class Tui < Formula
   desc "Opens terminal apps by their domain"
   homepage "https://tui-get.k-plus.one"
-  version "0.27.0"
-  license any_of: ["MIT", "Apache-2.0"]
-
-  depends_on :macos
-
-  on_arm do
+  if Hardware::CPU.arm?
     url "https://tui-get.k-plus.one/brew/0.27.0/tui-0.27.0-aarch64-apple-darwin"
     sha256 "b48fef89e84442728a4416fed1f58ad7e1981b3aed29d39958feb95bd706000c"
-  end
-
-  on_intel do
+  else
     url "https://tui-get.k-plus.one/brew/0.27.0/tui-0.27.0-x86_64-apple-darwin"
     sha256 "55e0259e53462d3a4b74b04e4ba60716400182a623c3ca9c4520dfd550d25219"
   end
+  license any_of: ["MIT", "Apache-2.0"]
+
+  depends_on :macos
 
   def install
     bin.install Dir["tui-*-apple-darwin"].first => "tui"
