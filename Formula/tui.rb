@@ -3,11 +3,11 @@ class Tui < Formula
   desc "Opens terminal apps by their domain"
   homepage "https://github.com/srt54558/homebrew-tui"
   if Hardware::CPU.arm?
-    url "https://tui-get.k-plus.one/brew/0.27.0/tui-0.27.0-aarch64-apple-darwin"
-    sha256 "b48fef89e84442728a4416fed1f58ad7e1981b3aed29d39958feb95bd706000c"
+    url "https://tui-get.k-plus.one/brew/0.28.0/tui-0.28.0-aarch64-apple-darwin"
+    sha256 "6b6d8784cbab7ec46a214588ae075c6dcc6e6bd9caed6effae147c72315d69a5"
   else
-    url "https://tui-get.k-plus.one/brew/0.27.0/tui-0.27.0-x86_64-apple-darwin"
-    sha256 "55e0259e53462d3a4b74b04e4ba60716400182a623c3ca9c4520dfd550d25219"
+    url "https://tui-get.k-plus.one/brew/0.28.0/tui-0.28.0-x86_64-apple-darwin"
+    sha256 "6dfa3211e261abcfbd4a43f51015f1b67a2e651b3866c9a3597630105e89c0e8"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
